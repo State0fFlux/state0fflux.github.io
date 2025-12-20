@@ -1,5 +1,5 @@
 import React from "react";
-import { FileText, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { FaItchIo, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const AboutMe: React.FC = () => {
@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
 				<div className="relative group mx-auto lg:mx-0">
 					<div className="absolute -inset-2 bg-gradient-to-tr from-purple-500 to-indigo-400 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 					<img
-						src="attachments/brady-headshot.JPG"
+						src="./brady-headshot.JPG"
 						alt="Brady Manske Portrait"
 						className="relative rounded-3xl w-72 h-72 lg:w-96 lg:h-96 object-cover transition-all duration-700 shadow-2xl"
 					/>
@@ -76,7 +76,7 @@ const AboutMe: React.FC = () => {
 						<p className="text-slate-500 mt-2">A summary of my professional journey and skills.</p>
 					</div>
 					<a
-						href="attachments/BradyManske.pdf"
+						href="./BradyManske.pdf"
 						className="group flex items-center gap-2 text-sm font-bold text-purple-600 px-6 py-2 rounded-full border border-purple-100 hover:bg-purple-50 transition-all">
 						<FileText size={16} />
 						Download PDF
@@ -84,11 +84,7 @@ const AboutMe: React.FC = () => {
 				</div>
 
 				<div className="bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden shadow-inner h-[800px] relative group">
-					<iframe
-						src="attachments/BradyManske.pdf"
-						className="w-full h-full p-4"
-						title="Resume PDF"
-					/>
+					<iframe src="./BradyManske.pdf" className="w-full h-full p-4" title="Resume PDF" />
 				</div>
 			</section>
 		</div>
