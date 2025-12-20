@@ -7,14 +7,14 @@ const AboutMe: React.FC = () => {
 	return (
 		<div className="space-y-24 py-16 fade-in">
 			{/* Profile Section */}
-			<section className="grid grid-cols-2 gap-16 items-center">
+			<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 				<div className="relative group mx-auto">
 					<img
 						src="./brady-headshot.JPG"
 						alt="Brady Manske Portrait"
-						className="relative rounded-3xl w-72 h-72 lg:w-96 lg:h-96 object-cover transition-all duration-700 border-4 border-black"
+						className="relative rounded-3xl size-72 lg:size-96 object-cover border-4 border-black transition-all duration-700"
 					/>
-					<div className="absolute -bottom-6 -right-6 p-6 rounded-2xl shadow-xl bg-black/75 backdrop-blur border-4 border-black">
+					<div className="absolute -bottom-6 -right-6 p-6 rounded-2xl shadow-xl bg-black/75 backdrop-blur border-4 border-black hidden lg:block">
 						<p className="text-[10px] font-bold primary uppercase tracking-[0.2em]">Based In</p>
 						<p className="text-lg text-white font-bold">Seattle, WA</p>
 					</div>
@@ -30,7 +30,22 @@ const AboutMe: React.FC = () => {
 						</h2>
 					</div>
 
-					<p className="text-slate-600 leading-relaxed text-xl font-light">Add a bio here!</p>
+					<p className="text-slate-600 leading-relaxed text-xl font-light">
+						A senior Computer Science student at the University of Washington, I am strongly
+						interested in software engineering, user experience, and creative technology.
+						<br />
+						<br />
+						Through my work in video game development, I’ve built systems involving real-time
+						physics, scripting, UI logic, and animation, often collaborating with others to bring
+						complex ideas to life in intuitive ways. I also have hands-on experience working with
+						Unity, Blender, GitHub, and other fundamental software for video game development.
+						<br />
+						<br />
+						I’m eager to apply my technical & creative skills in broader SWE roles that value
+						thoughtful design, interactivity, and user-centered thinking. I’m especially excited by
+						teams that balance technical rigor with creativity. I am always happy to chat or
+						collaborate – please don’t hesitate to reach out!
+					</p>
 
 					<div className="flex flex-wrap items-center gap-6">
 						<a
@@ -59,9 +74,9 @@ const AboutMe: React.FC = () => {
 
 			{/* Resume Section */}
 			<section className="space-y-10">
+				<h3 className="text-3xl font-black text-slate-900">My Resume</h3>
 				<div className="flex justify-between gap-4 border-black">
 					<div>
-						<h3 className="text-3xl font-black text-slate-900">My Resume</h3>
 						<p className="text-slate-500 mt-2">A summary of my professional journey and skills.</p>
 					</div>
 					<a
