@@ -11,19 +11,19 @@ const ProjectGallery: React.FC = () => {
 	const filteredProjects =
 		filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
 
-	const categories: (ProjectCategory | "All")[] = ["All", "Game", "Software", "Web"];
+	const categories: (ProjectCategory | "All")[] = ["All", "Video Game", "Software", "Web"];
 
 	return (
-		<div className="space-y-16 py-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+		<div className="space-y-16 py-16 fade-in">
 			<div className="flex flex-col items-center text-center space-y-8">
 				<div className="space-y-2">
-					<h2 className="text-4xl font-black text-slate-900">My Projects</h2>
-					<p className="text-slate-500 max-w-xl mx-auto">
+					<h2 className="text-4xl font-bold text-slate-900">My Projects</h2>
+					<p className="text-slate-500">
 						A deep dive into some of my favorite technical challenges and creative explorations.
 					</p>
 				</div>
 
-				<div className="flex items-center gap-16 px-4 py-2 backdrop-blur bg-black/25 border-4 border-black rounded-full overflow-x-auto no-scrollbar">
+				<div className="flex flex-wrap items-center gap-x-0 lg:gap-x-16 px-2 py-1 backdrop-blur bg-black/25 border-4 border-black rounded-full">
 					{categories.map((cat) => (
 						<button
 							key={cat}
@@ -43,7 +43,7 @@ const ProjectGallery: React.FC = () => {
 				</div>
 			) : (
 				<div className="h-64 flex flex-col items-center justify-center text-slate-400 bg-slate-50 rounded-[2rem] border-2 border-dashed border-slate-200">
-					<p className="font-medium">Stay tuned! More projects coming soon.</p>
+					<p className="text-xl">Stay tuned! More projects coming soon.</p>
 				</div>
 			)}
 

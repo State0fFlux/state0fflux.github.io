@@ -12,7 +12,7 @@ const App: React.FC = () => {
 		<div>
 			<Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-			<main className="mx-auto px-16">
+			<main className="mx-auto px-8 lg:px-16">
 				{activeTab === "home" ? <AboutMe /> : <ProjectGallery />}
 			</main>
 

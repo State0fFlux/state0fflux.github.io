@@ -21,9 +21,10 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #94a3b8;
 }
-/* Simple fade-in for page load */
+
+/* Animations */
 .fade-in {
-	animation: fadeIn 1s ease-out forwards;
+	animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes fadeIn {
 	from {
@@ -36,9 +37,24 @@ body {
 	}
 }
 
+.zoom-in {
+	animation: zoom-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes zoom-in {
+	from {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 .text-interactable,
 .box-interactable {
-	transition: all 0.5s ease; /* smooth tween for scale + color */
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* smooth tween for scale + color */
 	cursor: pointer;
 }
 
@@ -64,7 +80,7 @@ body {
 	border-color: black;
 	background-color: var(--primary);
 	color: black;
-	transform: scale(1.1);
+	transform: translateY(-10px);
 	box-shadow: 0px 15px 20px black;
 }
 
@@ -82,4 +98,12 @@ body {
 
 .bg-secondary {
 	background-color: var(--secondary) !important;
+}
+
+.border-primary {
+	border-color: var(--primary) !important;
+}
+
+.border-secondary {
+	border-color: var(--secondary) !important;
 }

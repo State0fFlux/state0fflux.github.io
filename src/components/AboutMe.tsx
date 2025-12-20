@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 				<div className="relative group mx-auto">
 					<img
-						src="./brady-headshot.JPG"
+						//src="./brady-headshot.JPG"
 						alt="Brady Manske Portrait"
 						className="relative rounded-3xl size-72 lg:size-96 object-cover border-4 border-black transition-all duration-700"
 					/>
@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
 						<h1 className="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
 							Brady Manske
 						</h1>
-						<h2 className="text-sm font-black primary uppercase tracking-[0.2em]">
+						<h2 className="text-sm font-bold primary uppercase tracking-[0.2em]">
 							Software Engineer | Gameplay Programming
 						</h2>
 					</div>
@@ -50,8 +50,8 @@ const AboutMe: React.FC = () => {
 					<div className="flex flex-wrap items-center gap-6">
 						<a
 							href="mailto:bmanske505@gmail.com"
-							className="flex items-center gap-2 px-8 py-4 box-interactable">
-							<IoMdMail size={18} />
+							className="flex items-center gap-2 p-1 box-interactable">
+							<IoMdMail size={22} />
 							Get in Touch
 						</a>
 
@@ -73,22 +73,20 @@ const AboutMe: React.FC = () => {
 			</section>
 
 			{/* Resume Section */}
-			<section className="space-y-10">
-				<h3 className="text-3xl font-black text-slate-900">My Resume</h3>
-				<div className="flex justify-between gap-4 border-black">
+			<section>
+				<h3 className="text-3xl font-bold text-slate-900">My Resume</h3>
+				<div className="flex flex-wrap justify-between gap-4 border-black">
 					<div>
 						<p className="text-slate-500 mt-2">A summary of my professional journey and skills.</p>
 					</div>
-					<a
-						href="./BradyManske.pdf"
-						className="flex items-center gap-2 px-5 py-1 box-interactable">
-						<FileText size={16} />
+					<a href="./BradyManske.pdf" className="flex items-center gap-2 p-1 box-interactable">
+						<FileText size={22} />
 						Download PDF
 					</a>
 				</div>
-				<hr className="h-1 bg-black rounded-full" />
-				<div className="mx-auto max-w-4xl border-4 border-black rounded-3xl h-[800px] overflow-hidden">
-					<iframe src="./BradyManske.pdf#view=FitH" className="w-full h-full" title="Resume PDF" />
+				<hr className="h-1 bg-black rounded-full my-10" />
+				<div className="mx-auto border-4 border-black rounded-3xl aspect-[8.5/11] overflow-hidden">
+					<iframe src="./BradyManske.pdf#view=Fit" className="w-full h-full" title="My Resume" />
 				</div>
 			</section>
 		</div>

@@ -1,18 +1,17 @@
-
-export type ProjectCategory = 'Game' | 'Web' | 'Software';
+export type ProjectCategory = "Video Game" | "Web" | "Software";
 
 export interface Project {
-  id: string;
-  title: string;
-  category: ProjectCategory;
-  thumbnail: string;
-  shortDescription: string;
-  longWriteup: string;
-  githubUrl?: string;
-  itchUrl?: string;
-  demoUrl?: string;
-  images: string[];
-  tags: string[];
+	id: string;
+	title: string;
+	category: ProjectCategory;
+	thumbnail: string;
+	shortDescription: string;
+	longWriteup: string;
+	githubUrl?: string;
+	itchUrl?: string;
+	demoUrl?: string;
+	images: string[];
+	tags: string[];
 }
 
-export type ActiveTab = 'home' | 'projects';
+export type ActiveTab = "home" | "projects";

@@ -8,7 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 	return (
-		<nav className="sticky top-0 z-50 bg-black/25 backdrop-blur border-y-4 border-black py-6">
+		<nav className="sticky top-0 z-10 bg-black/25 backdrop-blur border-y-4 border-black py-6">
 			<div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
 				<div className="flex gap-40 mt-0">
 					<button
