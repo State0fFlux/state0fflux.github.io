@@ -23,16 +23,16 @@ body {
 }
 /* Simple fade-in for page load */
 .fade-in {
-	animation: fadeIn 0.8s ease-out forwards;
+	animation: fadeIn 1s ease-out forwards;
 }
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translateY(30px);
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(0px);
 	}
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .box-interactable {
-	border: 5px solid var(--primary);
+	border: 4px solid var(--primary);
 	background-color: black;
 	color: var(--primary);
 }

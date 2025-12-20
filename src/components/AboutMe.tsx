@@ -5,7 +5,7 @@ import { IoMdMail, IoMdMailOpen } from "react-icons/io";
 
 const AboutMe: React.FC = () => {
 	return (
-		<div className="space-y-24 py-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+		<div className="space-y-24 py-16 fade-in">
 			{/* Profile Section */}
 			<section className="grid grid-cols-2 gap-16 items-center">
 				<div className="relative group mx-auto">
@@ -59,7 +59,7 @@ const AboutMe: React.FC = () => {
 
 			{/* Resume Section */}
 			<section className="space-y-10">
-				<div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-100 pb-8">
+				<div className="flex justify-between gap-4 border-black">
 					<div>
 						<h3 className="text-3xl font-black text-slate-900">My Resume</h3>
 						<p className="text-slate-500 mt-2">A summary of my professional journey and skills.</p>
@@ -71,9 +71,9 @@ const AboutMe: React.FC = () => {
 						Download PDF
 					</a>
 				</div>
-
-				<div className="backdrop-blur bg-black/50 border-4 border-black rounded-3xl overflow-hidden shadow-inner h-[800px] relative group">
-					<iframe src="./BradyManske.pdf" className="w-full h-full p-0" title="Resume PDF" />
+				<hr className="h-1 bg-black rounded-full" />
+				<div className="mx-auto max-w-4xl border-4 border-black rounded-3xl h-[800px] overflow-hidden">
+					<iframe src="./BradyManske.pdf#view=FitH" className="w-full h-full" title="Resume PDF" />
 				</div>
 			</section>
 		</div>
