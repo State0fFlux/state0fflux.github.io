@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 					</div>
 				</div>
 
-				<p className="text-black text-sm leading-relaxed line-clamp-2 font-medium">
+				<p className="text-white text-sm leading-relaxed line-clamp-2 font-medium">
 					{project.shortDescription}
 				</p>
 

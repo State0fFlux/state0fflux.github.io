@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
 						<a
 							href="mailto:bmanske505@gmail.com"
 							target="_blank"
-							className="flex items-center gap-2 p-1 box-interactable">
+							className="flex items-center gap-2 p-2 w-fit box-interactable">
 							<IoMdMail size={22} />
 							Get in Touch
 						</a>
@@ -83,21 +83,17 @@ const AboutMe: React.FC = () => {
 			{/* Resume Section */}
 			<section>
 				<h3 className="text-3xl font-bold text-slate-900">My Resume</h3>
-				<div className="flex flex-wrap justify-between gap-4 border-black">
+				<div className="flex flex-col justify-between gap-4">
 					<div>
 						<p className="text-slate-500 mt-2">A summary of my professional journey and skills.</p>
 					</div>
 					<a
 						href="./BradyManske.pdf"
 						target="_blank"
-						className="flex items-center gap-2 p-1 box-interactable">
+						className="flex items-center gap-2 p-2 w-fit box-interactable">
 						<FileText size={22} />
-						Download PDF
+						View PDF
 					</a>
-				</div>
-				<hr className="h-1 bg-black rounded-full my-10" />
-				<div className="w-1/2 mx-auto border-4 border-black rounded-3xl aspect-[8.5/11] overflow-hidden">
-					<iframe src="./BradyManske.pdf#view=FitH" className="h-full w-full" title="My Resume" />
 				</div>
 			</section>
 		</div>

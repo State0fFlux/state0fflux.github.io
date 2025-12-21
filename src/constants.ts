@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
 		title: "Crust's Bakery",
 		category: "Video Game",
 		thumbnail: "https://img.itch.zone/aW1nLzIzNzI1MjUwLnBuZw==/315x250%23c/fJX9Ap.png",
-		shortDescription: "Short tagline",
+		shortDescription: "It’s not just about the bread you make; it’s about who you share it with!",
 		longWriteup: `
       # Heading 1
       ## Heading 2
@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/crusts-bakery",
-		demoUrl: "https://itch.io/embed-upload/15322444?color=edd6ac",
+		demoUrl: "https://itch.io/embed-upload/15322444?color=000000",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "3rd Place"
@@ -25,14 +25,14 @@ export const PROJECTS: Project[] = [
 		title: "Kindling",
 		category: "Video Game",
 		thumbnail: "https://img.itch.zone/aW1nLzIxOTU2NTg2LnBuZw==/315x250%23c/kTiFuJ.png",
-		shortDescription: "Short tagline",
+		shortDescription: "Defend warmth against a world gone cold.",
 		longWriteup: `
       # Heading 1
       ## Heading 2
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/Kindling",
-		demoUrl: "https://itch.io/embed-upload/15906793?color=382f27",
+		demoUrl: "https://itch.io/embed-upload/15906793?color=000000",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "Community Favorite"
@@ -42,14 +42,14 @@ export const PROJECTS: Project[] = [
 		title: "Bug Hunt",
 		category: "Video Game",
 		thumbnail: "https://img.itch.zone/aW1nLzIxNjI4ODU5LnBuZw==/315x250%23c/Nocoo%2F.png",
-		shortDescription: "Short tagline",
+		shortDescription: "Collect bugs to earn your Bug-Catching Badge and impress your scout leader!",
 		longWriteup: `
       # Heading 1
       ## Heading 2
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/Bug-Hunt",
-		demoUrl: "https://itch.io/embed-upload/15906853?color=5b6b2c",
+		demoUrl: "https://itch.io/embed-upload/15906853?color=000000",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "1st Place"

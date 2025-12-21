@@ -18,8 +18,8 @@ const App: React.FC = () => {
 
 			<footer className="bg-black/25 backdrop-blur border-y-4 border-black py-6">
 				<div className="flex flex-col items-center gap-4">
-					<h2 className="text-xl uppercase">Brady Manske</h2>
-					<div className="flex gap-8">
+					<h2 className="text-xl uppercase">© 2025 Brady Manske</h2>
+					<div className="flex gap-16">
 						<a
 							className="text-interactable"
 							href="https://www.linkedin.com/in/brady-manske/"

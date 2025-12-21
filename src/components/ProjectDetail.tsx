@@ -88,11 +88,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
 										<a
 											href={project.githubUrl}
 											target="_blank"
-											className="flex items-center justify-between p-1 box-interactable">
+											className="w-fit p-2 box-interactable">
 											<span className="flex items-center gap-3 font-bold">
-												<Github size={20} /> View Codebase
+												<Github size={20} /> View Codebase <ExternalLink size={20} />
 											</span>
-											<ExternalLink size={20} />
 										</a>
 									)}
 								</div>
