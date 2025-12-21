@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 				<div className="relative group mx-auto">
 					<img
-						//src="./brady-headshot.JPG"
+						src="./brady-headshot.JPG"
 						alt="Brady Manske Portrait"
 						className="relative rounded-3xl size-72 lg:size-96 object-cover border-4 border-black transition-all duration-700"
 					/>
@@ -85,8 +85,8 @@ const AboutMe: React.FC = () => {
 					</a>
 				</div>
 				<hr className="h-1 bg-black rounded-full my-10" />
-				<div className="mx-auto border-4 border-black rounded-3xl aspect-[8.5/11] overflow-hidden">
-					<iframe src="./BradyManske.pdf#view=Fit" className="w-full h-full" title="My Resume" />
+				<div className="w-1/2 mx-auto border-4 border-black rounded-3xl aspect-[8.5/11] overflow-hidden">
+					<iframe src="./BradyManske.pdf#view=FitH" className="h-full w-full" title="My Resume" />
 				</div>
 			</section>
 		</div>

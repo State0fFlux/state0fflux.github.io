@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PROJECTS } from "../constants";
 import { Project, ProjectCategory } from "../types";
 import ProjectCard from "./ProjectCard";
@@ -7,6 +7,18 @@ import ProjectDetail from "./ProjectDetail";
 const ProjectGallery: React.FC = () => {
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 	const [filter, setFilter] = useState<ProjectCategory | "All">("All");
+
+	useEffect(() => {
+		if (selectedProject) {
+			document.body.classList.add("overflow-hidden");
+		} else {
+			document.body.classList.remove("overflow-hidden");
+		}
+
+		return () => {
+			document.body.classList.remove("overflow-hidden");
+		};
+	}, [selectedProject]);
 
 	const filteredProjects =
 		filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
@@ -28,7 +40,9 @@ const ProjectGallery: React.FC = () => {
 						<button
 							key={cat}
 							onClick={() => setFilter(cat)}
-							className={`px-6 py-2 text-sm text-interactable ${filter === cat ? "active" : ""}`}>
+							className={`px-6 py-2 text-xs lg:text-sm text-interactable ${
+								filter === cat ? "active" : ""
+							}`}>
 							{cat.toUpperCase()}
 						</button>
 					))}

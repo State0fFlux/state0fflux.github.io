@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Project } from "../types";
 import { Github, Gamepad2, ExternalLink } from "lucide-react";
 import GameEmbed from "./GameEmbed";
@@ -9,6 +9,17 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") {
+				onClose();
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [onClose]);
+
 	const renderContent = (text: string) => {
 		return text.split("\n").map((line, i) => {
 			if (line.trim().startsWith("##")) {
