@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/crusts-bakery",
-		itchUrl: "https://state0fflux.itch.io/Crusts-Bakery",
+		demoUrl: "https://itch.io/embed-upload/15322444?color=edd6ac",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "3rd Place"
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/Kindling",
-		itchUrl: "https://state0fflux.itch.io/kindling",
+		demoUrl: "https://itch.io/embed-upload/14193767?color=382f27",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "Community Favorite"
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
       Writeup
     `,
 		githubUrl: "https://github.com/State0fFlux/Bug-Hunt",
-		itchUrl: "https://state0fflux.itch.io/bug-hunt",
+		demoUrl: "https://itch.io/embed-upload/14011411?color=5b6b2c",
 		images: [],
 		tags: ["Unity", "C#"],
 		// award: "1st Place"

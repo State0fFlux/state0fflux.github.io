@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 					</div>
 					<div className="flex gap-3">
 						{project.githubUrl && <Github size={18} />}
-						{project.itchUrl && <Gamepad2 size={18} />}
+						{project.category == "Video Game" && <Gamepad2 size={18} />}
 					</div>
 				</div>
 

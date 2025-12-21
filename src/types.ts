@@ -8,7 +8,6 @@ export interface Project {
 	shortDescription: string;
 	longWriteup: string;
 	githubUrl?: string;
-	itchUrl?: string;
 	demoUrl?: string;
 	images: string[];
 	tags: string[];

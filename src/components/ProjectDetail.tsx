@@ -1,6 +1,7 @@
 import React from "react";
 import { Project } from "../types";
 import { Github, Gamepad2, ExternalLink } from "lucide-react";
+import GameEmbed from "./GameEmbed";
 
 interface ProjectDetailProps {
 	project: Project;
@@ -58,6 +59,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
 				<div className="flex-1 overflow-y-auto custom-scrollbar p-8 lg:p-16">
 					<div className="max-w-4xl mx-auto space-y-20">
 						{/* Main Visuals */}
+						<div className="game-wrapper">
+							<GameEmbed title={project.title} src={project.demoUrl} />
+						</div>
 						<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 							<div className="lg:col-span-2">
 								<img
@@ -79,16 +83,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
 												className="flex items-center justify-between p-1 box-interactable">
 												<span className="flex items-center gap-3 font-bold">
 													<Github size={20} /> View Codebase
-												</span>
-												<ExternalLink size={20} />
-											</a>
-										)}
-										{project.itchUrl && (
-											<a
-												href={project.itchUrl}
-												className="flex items-center justify-between p-1 box-interactable">
-												<span className="flex items-center gap-3 font-bold">
-													<Gamepad2 size={20} /> Play Game
 												</span>
 												<ExternalLink size={20} />
 											</a>
