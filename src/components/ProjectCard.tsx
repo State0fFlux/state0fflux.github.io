@@ -1,6 +1,7 @@
 import React from "react";
 import { Project } from "../types";
-import { Github, Gamepad2 } from "lucide-react";
+import { LuGamepad2, LuGithub, LuTrophy } from "react-icons/lu";
+import { Heading } from "./FormattedBlocks";
 
 interface ProjectCardProps {
 	project: Project;
@@ -21,21 +22,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 			</div>
 
 			<div className="p-8 space-y-4">
-				<div className="flex justify-between items-start">
-					<div className="space-y-1">
-						<span className="text-[10px] font-bold uppercase tracking-[0.2em]">
-							{project.category}
-						</span>
-						<h3 className="text-2xl font-bold text-white">{project.title}</h3>
-					</div>
+				<div className="flex justify-between">
+					<Heading project={project} />
 					<div className="flex gap-3">
-						{project.githubUrl && <Github size={18} />}
-						{project.category == "Video Game" && <Gamepad2 size={18} />}
+						{project.githubUrl && <LuGithub size={18} />}
+						{project.category == "Video Game" && <LuGamepad2 size={18} />}
 					</div>
 				</div>
 
-				<p className="text-white text-sm leading-relaxed line-clamp-2 font-medium">
-					{project.shortDescription}
+				<p className="text-white text-xs leading-relaxed line-clamp-2 font-medium">
+					{project.tagline}
 				</p>
 
 				<div className="flex flex-wrap gap-2 pt-2">

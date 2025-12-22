@@ -1,16 +1,17 @@
 export type ProjectCategory = "Video Game" | "Web" | "Software";
 
 export interface Project {
-	id: string;
 	title: string;
 	category: ProjectCategory;
 	thumbnail: string;
-	shortDescription: string;
-	longWriteup: string;
+	tagline: string;
+	writeup: string;
 	githubUrl?: string;
 	demoUrl?: string;
 	images: string[];
 	tags: string[];
+	award?: string;
+	techStack?: Record<string, string[]>;
 }
 
 export type ActiveTab = "home" | "projects";
