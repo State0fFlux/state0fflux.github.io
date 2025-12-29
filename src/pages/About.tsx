@@ -1,8 +1,8 @@
 import React from "react";
 import { FaEnvelope, FaFilePdf, FaUserLarge } from "react-icons/fa6";
-import { Socials } from "./FormattedBlocks";
+import { Socials } from "../components/FormattedBlocks";
 
-const AboutMe: React.FC = () => {
+const About: React.FC = () => {
 	return (
 		<div className="flex flex-col gap-y-16 py-16 fade-in">
 			{/* Profile Section */}
@@ -86,4 +86,4 @@ const AboutMe: React.FC = () => {
 	);
 };
 
-export default AboutMe;
+export default About;

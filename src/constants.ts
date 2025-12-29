@@ -121,8 +121,3 @@ export const PROJECTS: Project[] = [
 		award: "1st Place",
 	},
 ];
-
-/*
-TODO:
-- populate writeup array with info
-*/

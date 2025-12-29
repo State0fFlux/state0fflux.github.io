@@ -1,29 +1,26 @@
 import React from "react";
-import { ActiveTab } from "../types";
+import { Link, useLocation } from "react-router-dom";
 
-interface NavbarProps {
-	activeTab: ActiveTab;
-	setActiveTab: (tab: ActiveTab) => void;
-}
+const Navbar: React.FC = () => {
+  const location = useLocation();
 
-const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 	return (
 		<nav className="sticky top-0 z-10 bg-black/75 backdrop-blur border-y-4 border-black py-6 items-center flex justify-center gap-20">
-			<button
-				onClick={() => setActiveTab("home")}
+      <Link
+        to="/"
 				className={`text-interactable text-white uppercase ${
-					activeTab === "home" ? "active" : ""
+					location.pathname === "/" ? "active" : ""
 				}`}>
 				About
-			</button>
+			</Link>
 
-			<button
-				onClick={() => setActiveTab("projects")}
+			<Link
+				to="/projects"
 				className={`text-interactable text-white uppercase ${
-					activeTab === "projects" ? "active" : ""
+					location.pathname === "/projects" ? "active" : ""
 				}`}>
 				Projects
-			</button>
+			</Link>
 		</nav>
 	);
 };

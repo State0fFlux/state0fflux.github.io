@@ -4,8 +4,8 @@
 
 /* Primitives */
 :root {
-	--primary: rgb(118, 80, 255);
-	--secondary: rgb(110, 110, 110);
+	--primary: rgb(118, 80, 255); /* #7650ffff */
+	--secondary: rgb(110, 110, 110); /* #6e6e6eff */
 }
 
 .primary {

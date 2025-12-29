@@ -1,19 +1,25 @@
-import React, { useState } from "react";
-import { ActiveTab } from "./types";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import AboutMe from "./components/AboutMe";
-import ProjectGallery from "./components/ProjectGallery";
 import { Socials } from "./components/FormattedBlocks";
 
-const App: React.FC = () => {
-	const [activeTab, setActiveTab] = useState<ActiveTab>("home");
+import About from "./pages/About";
+import Projects from "./pages/Projects";
 
+const App: React.FC = () => {
 	return (
-		<div>
-			<Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+		<Router>
+			<Navbar />
 
 			<main className="mx-auto px-8 lg:px-16">
-				{activeTab === "home" ? <AboutMe /> : <ProjectGallery />}
+				<Routes>
+					<Route path="/" element={<About />} />
+					<Route path="/projects" element={<Projects />} />
+
+					{/* Redirect unknown routes to "/" */}
+					<Route path="*" element={<Navigate to="/" replace />} />
+				</Routes>
 			</main>
 
 			<footer className="bg-black/75 backdrop-blur border-y-4 border-black py-6">
@@ -22,7 +28,7 @@ const App: React.FC = () => {
 					<Socials className=" text-white" />
 				</div>
 			</footer>
-		</div>
+		</Router>
 	);
 };
 

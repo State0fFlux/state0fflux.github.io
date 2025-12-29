@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { PROJECTS } from "../constants";
 import { Project, ProjectCategory } from "../types";
-import ProjectCard from "./ProjectCard";
-import ProjectModal from "./ProjectModal";
+import ProjectCard from "../components/ProjectCard";
+import ProjectModal from "../components/ProjectModal";
 
-const ProjectGallery: React.FC = () => {
-	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+import { useSearchParams } from "react-router-dom";
+
+const Projects: React.FC = () => {
 	const [filter, setFilter] = useState<ProjectCategory | "All">("All");
+
+	const [searchParams, setSearchParams] = useSearchParams();
+	const selectedTitle = searchParams.get("title");
+	const selectedProject: Project = PROJECTS.find((p) => p.title === selectedTitle) ?? null;
 
 	const filteredProjects =
 		filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
@@ -48,7 +53,11 @@ const ProjectGallery: React.FC = () => {
 						selectedProject == project ? (
 							<div></div>
 						) : (
-							<ProjectCard key={project.title} project={project} onClick={setSelectedProject} />
+							<ProjectCard
+								key={project.title}
+								project={project}
+								onClick={() => setSearchParams({ title: project.title })}
+							/>
 						)
 					)}
 				</div>
@@ -59,10 +68,10 @@ const ProjectGallery: React.FC = () => {
 			)}
 
 			{selectedProject && (
-				<ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+				<ProjectModal project={selectedProject} onClose={() => setSearchParams({})} />
 			)}
 		</div>
 	);
 };
 
-export default ProjectGallery;
+export default Projects;
