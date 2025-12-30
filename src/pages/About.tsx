@@ -11,11 +11,11 @@ const About: React.FC = () => {
 					<img
 						src="./brady-headshot.JPG"
 						alt="Brady Manske Portrait"
-						className="size-96 aspect-square object-cover border transition-size duration-700"
+						className="size-96 aspect-square object-cover border border-secondary transition-size duration-700"
 					/>
-					<div className="absolute -bottom-6 -right-6 p-6 border bg-black/75 backdrop-blur">
+					<div className="absolute -bottom-6 -right-6 p-6 border milky">
 						<h4>Based In</h4>
-						<p className="text-lg text-white font-bold">Seattle, WA</p>
+						<p className="text-lg primary font-bold">Seattle, WA</p>
 					</div>
 				</div>
 
@@ -42,7 +42,7 @@ const About: React.FC = () => {
 							<FaEnvelope size={22} title="Email" />
 							Get in Touch
 						</a>
-						<Socials className="secondary gap-8" />
+						<Socials className="text gap-8" />
 					</div>
 				</div>
 			</section>

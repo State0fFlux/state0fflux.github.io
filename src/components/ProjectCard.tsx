@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 				<Heading project={project} />
 
 				{project.tagline && (
-					<p className="text-white text-sm leading-relaxed line-clamp-2">{project.tagline}</p>
+					<p className="primary text-sm leading-relaxed line-clamp-2">{project.tagline}</p>
 				)}
 
 				<Tags project={project} />

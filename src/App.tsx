@@ -22,10 +22,10 @@ const App: React.FC = () => {
 				</Routes>
 			</main>
 
-			<footer className="bg-black/75 backdrop-blur border-y-4 border-black py-6">
+			<footer className="milky border-y-4 py-6">
 				<div className="grid grid-col justify-center gap-4">
-					<p className="text-white uppercase">© 2025 Brady Manske</p>
-					<Socials className=" text-white" />
+					<p className="primary uppercase">© 2025 Brady Manske</p>
+					<Socials className="primary" />
 				</div>
 			</footer>
 		</Router>

@@ -30,7 +30,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 		/* Blurred background */
 		<div className="fixed z-20 bg-black/75 backdrop-blur inset-0 flex justify-center items-center">
 			{/* Rounded shell of modal, clips contents */}
-			<div className="bg-white border zoom-in overflow-hidden">
+			<div className="bg-primary border border-secondary zoom-in overflow-hidden">
 				{/* Layout container - NO overflow rules */}
 				<div className="flex flex-col max-h-[90vh] max-w-screen-xl">
 					{/* Header */}

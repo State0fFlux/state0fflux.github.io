@@ -28,7 +28,7 @@ export const Heading: React.FC<ProjectProps> = ({ project }) => {
 	return (
 		<div className="space-y-1">
 			<div className="spaced-out">{project.category}</div>
-			<h3 className="text-2xl font-bold text-white">{project.title}</h3>
+			<h3 className="text-2xl font-bold primary">{project.title}</h3>
 			{project.award && (
 				<span className="text-icon">
 					<FaAward size={22} title="Award Earned" />

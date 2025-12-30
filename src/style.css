@@ -4,45 +4,76 @@
 
 /* Primitives */
 :root {
-	--primary: rgb(118, 80, 255); /* #7650ffff */
-	--secondary: rgb(110, 110, 110); /* #6e6e6eff */
+	--accent: rgb(118, 80, 255); /* #7650ffff */
+	--text: rgb(71 85 105);
+	--primary: 255 255 255;
+	--secondary: 0 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: 0 0 0;
+		--secondary: 255 255 255;
+		--text: rgb(148 163 184);
+	}
+}
+
+.accent {
+	color: var(--accent);
+}
+
+.text {
+	color: var(--text);
+}
+
+.bg-accent {
+	background-color: var(--accent);
 }
 
 .primary {
-	color: var(--primary) !important;
+	color: rgb(var(--primary));
 }
 
 .secondary {
-	color: var(--secondary) !important;
+	color: rgb(var(--secondary));
 }
 
 .bg-primary {
-	background-color: var(--primary) !important;
+	background-color: rgb(var(--primary));
 }
 
 .bg-secondary {
-	background-color: var(--secondary) !important;
+	background-color: rgb(var(--secondary));
+}
+
+.border-secondary {
+	border-color: rgb(var(--secondary)) !important;
+}
+
+.milky {
+	@apply bg-[rgb(var(--secondary)_/_0.75)] backdrop-blur border-secondary !important;
 }
 
 body {
 	font-family: "Inter", sans-serif;
 	scroll-behavior: smooth;
+	@apply text bg-primary;
 }
 
 h1 {
-	@apply text-5xl font-extrabold text-slate-900;
+	@apply text-5xl font-extrabold secondary;
 }
 
 h2 {
-	@apply text-3xl font-bold text-slate-900;
+	@apply text-3xl font-bold secondary;
 }
 
 h3 {
-	@apply text-xl text-slate-500;
+	@apply text-xl text;
 }
 
 h4 {
-	@apply primary spaced-out;
+	@apply accent spaced-out;
 }
 
 ul {
@@ -51,7 +82,7 @@ ul {
 
 p,
 li {
-	@apply text-slate-600 leading-relaxed text-xl font-light;
+	@apply leading-relaxed text-xl font-light;
 }
 
 li {
@@ -60,7 +91,7 @@ li {
 
 li::marker {
 	content: "✶";
-	color: black;
+	color: var(--accent);
 	font-size: 1.5rem;
 }
 
@@ -122,8 +153,8 @@ li::marker {
 
 /* toggle / active underline */
 .text-interactable.active {
-	color: var(--primary);
-	text-decoration: underline var(--primary) 4px;
+	@apply accent;
+	text-decoration: underline var(--accent) 4px;
 	text-underline-offset: 8px;
 }
 
@@ -141,11 +172,11 @@ a.box-interactable {
 }
 
 .box-interactable {
-	@apply primary bg-black border;
+	@apply accent bg-secondary border;
 }
 
 .box-interactable:hover {
-	@apply text-black bg-primary translate-y-[-15px];
+	@apply secondary bg-accent translate-y-[-15px];
 	filter: drop-shadow(0px 10px 10px black);
 }
 
