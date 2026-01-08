@@ -9,7 +9,7 @@ const About: React.FC = () => {
 			<section className="grid grid-cols-1 lg:grid-cols-5 gap-y-16 gap-x-32 items-center justify-center">
 				<div className="relative mx-auto lg:col-span-2">
 					<img
-						src="./brady-headshot.JPG"
+						src="./brady-headshot.jpeg"
 						alt="Brady Manske Portrait"
 						className="size-96 aspect-square object-cover border border-secondary transition-size duration-700"
 					/>
