@@ -1,6 +1,11 @@
 import React from "react";
-import { FaEnvelope, FaFilePdf, FaUserLarge } from "react-icons/fa6";
 import { Socials } from "../components/FormattedBlocks";
+import {
+	PiEnvelopeFill,
+	PiEnvelopeOpenFill,
+	PiFileTextFill,
+	PiUserSquareDuotone,
+} from "react-icons/pi";
 
 const About: React.FC = () => {
 	return (
@@ -26,21 +31,19 @@ const About: React.FC = () => {
 					</div>
 
 					<p>
-						A versatile programmer with experience across web and game development, I am focused on
-						building systems that feel intentional, responsive, and user-centered. I’m comfortable
-						wearing multiple hats, moving between gameplay, tools, and interface work, and I enjoy
-						collaborating closely with designers and artists to bridge technical structure with
-						creative goals. I value rapid learning and iteration, using playtesting and feedback to
-						refine experiences until they feel right.
+						A versatile programmer with experience across web and game development, I have a passion
+						for turning design abstractions into functional, user-focused systems. I thrive at the
+						intersection of creativity and technology, collaborating closely with designers and
+						artists to bridge the gap between creative vision and technical implementation.
+						Comfortable working across front-end and back-end development, I focus on building
+						experiences that feel intentional, responsive, and polished, iterating rapidly based on
+						playtesting and feedback.
 					</p>
 
 					<div className="flex flex-wrap gap-8 items-center justify-center md:justify-start">
-						<a
-							href="mailto:bmanske505@gmail.com"
-							target="_blank"
-							className="box-interactable text-icon">
-							<FaEnvelope size={22} title="Email" />
-							Get in Touch
+						<a href="mailto:bmanske505@gmail.com" target="_blank" className="box-depress text-icon">
+							<PiEnvelopeFill size={22} title="Email" />
+							<span>Get in Touch</span>
 						</a>
 						<Socials className="text gap-8" />
 					</div>
@@ -52,9 +55,9 @@ const About: React.FC = () => {
 				<h2>My Resume</h2>
 				<p>A summary of my professional journey and skills.</p>
 				<div className="flex justify-center md:justify-start">
-					<a href="./BradyManske.pdf" target="_blank" className="box-interactable text-icon">
-						<FaFilePdf size={22} title="Resume" />
-						View Resume
+					<a href="./BradyManske.pdf" target="_blank" className="box-depress text-icon">
+						<PiFileTextFill size={22} title="Resume" />
+						<span>View Resume</span>
 					</a>
 				</div>
 			</section>
@@ -71,7 +74,7 @@ const About: React.FC = () => {
 						href="https://www.linkedin.com/in/cassidy-sanders-curry/"
 						target="_blank"
 						className="text-interactable">
-						<FaUserLarge size={40} title="Cassidy's LinkedIn Profile" />
+						<PiUserSquareDuotone size={40} title="Cassidy's LinkedIn Profile" />
 					</a>
 					<div>
 						<p className="font-bold">Cassidy Sanders-Curry</p>

@@ -1,6 +1,11 @@
 import { Project } from "../types";
-import { IconMap } from "../constants";
-import { FaGithub, FaItchIo, FaLinkedin, FaAward, FaPoop } from "react-icons/fa6";
+import { DefaultIcon, HeadingIcons } from "../constants";
+import {
+	PiGameControllerDuotone,
+	PiGithubLogoDuotone,
+	PiLinkedinLogoDuotone,
+	PiMedalDuotone,
+} from "react-icons/pi";
 
 interface ProjectProps {
 	project: Project;
@@ -31,7 +36,7 @@ export const Heading: React.FC<ProjectProps> = ({ project }) => {
 			<h3 className="text-2xl font-bold primary">{project.title}</h3>
 			{project.award && (
 				<span className="text-icon">
-					<FaAward size={22} title="Award Earned" />
+					<PiMedalDuotone size={22} title="Award Earned" />
 					{project.award}
 				</span>
 			)}
@@ -46,13 +51,13 @@ export const Socials: React.FC<DivProps> = ({ className }) => {
 				href="https://www.linkedin.com/in/brady-manske/"
 				target="_blank"
 				className="text-interactable">
-				<FaLinkedin size={25} title="LinkedIn Profile" />
+				<PiLinkedinLogoDuotone size={25} title="LinkedIn Profile" />
 			</a>
 			<a href="https://github.com/bmanske505" target="_blank" className="text-interactable">
-				<FaGithub size={25} title="GitHub Profile" />
+				<PiGithubLogoDuotone size={25} title="GitHub Profile" />
 			</a>
 			<a href="https://state0fflux.itch.io" target="_blank" className="text-interactable">
-				<FaItchIo size={25} title="Itch.io Profile" />
+				<PiGameControllerDuotone size={25} title="Itch.io Profile" />
 			</a>
 		</div>
 	);
@@ -99,12 +104,12 @@ export const Writeup: React.FC<ProjectProps> = ({ project }) => {
 			{project.writeup.map((section) => {
 				if (!section.text) return;
 				const blocks = parseTextToBlocks(section.text);
-				const Icon = IconMap.get(section.heading);
+				const Icon = HeadingIcons[section.heading] ?? DefaultIcon;
 
 				return (
 					<div className="break-inside-avoid p-5 flex flex-col gap-4">
 						<h4 className="text-2xl capitalize tracking-normal text-icon">
-							{Icon && <Icon size={22} title={section.heading} />}
+							<Icon size={22} title={section.heading} />
 							{section.heading}
 						</h4>
 

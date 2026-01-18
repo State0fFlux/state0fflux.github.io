@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Project } from "../types";
-import { FaGithub, FaCalendarDays, FaPalette, FaBriefcase } from "react-icons/fa6";
 import GameEmbed from "./GameEmbed";
 import { Heading, Tags, Writeup } from "./FormattedBlocks";
+import {
+	PiBriefcaseDuotone,
+	PiCalendarDotsDuotone,
+	PiGithubLogoDuotone,
+	PiPaintBrushDuotone,
+} from "react-icons/pi";
 
 interface ProjectModalProps {
 	project: Project;
@@ -35,7 +40,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 				<div className="flex flex-col max-h-[90vh] max-w-screen-xl">
 					{/* Header */}
 					<div
-						className="py-4 px-8 box-interactable !rounded-none !border-x-0 !border-t-0"
+						className="py-4 px-8 box-lift !rounded-none !border-x-0 !border-t-0"
 						onClick={onClose}>
 						<Heading project={project} />
 					</div>
@@ -50,17 +55,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 								<div className="space-y-2">
 									<h4 className="secondary">Details</h4>
 									<p className="text-icon">
-										<FaBriefcase size={22} title="Event" />
+										<PiBriefcaseDuotone size={22} title="Event" />
 										{project.event}
 									</p>
 									<p className="text-icon">
-										<FaCalendarDays size={22} title="Date" />
+										<PiCalendarDotsDuotone size={22} title="Date" />
 										{project.start && `${project.start} - `}
 										{project.end}
 									</p>
 									{project.theme && (
 										<p className="text-icon">
-											<FaPalette size={22} title="Theme" />“{project.theme}”
+											<PiPaintBrushDuotone size={22} title="Theme" />“{project.theme}”
 										</p>
 									)}
 								</div>
@@ -68,11 +73,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 								<div className="space-y-4">
 									<h4 className="secondary">Connect & Launch</h4>
 									{project.githubUrl && (
-										<a
-											href={project.githubUrl}
-											target="_blank"
-											className="box-interactable text-icon">
-											View Codebase <FaGithub size={22} title="GitHub Repository" />
+										<a href={project.githubUrl} target="_blank" className="box-lift text-icon">
+											View Codebase <PiGithubLogoDuotone size={22} title="GitHub Repository" />
 										</a>
 									)}
 								</div>

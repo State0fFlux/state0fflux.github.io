@@ -1,13 +1,33 @@
 import { IconType } from "react-icons";
-import { Project, Heading } from "./types";
-import { FaBoltLightning, FaSeedling, FaScrewdriverWrench, FaRocket } from "react-icons/fa6";
+import { Project, Heading, ProjectCategory } from "./types";
 
-export const IconMap: Map<Heading, IconType> = new Map([
-	["Overview", FaRocket],
-	["My Role", FaScrewdriverWrench],
-	["My Challenges", FaBoltLightning],
-	["What I Learned", FaSeedling],
-]);
+import {
+	PiBookOpenDuotone,
+	PiGameControllerDuotone,
+	PiGearDuotone,
+	PiGearFineDuotone,
+	PiGlobeDuotone,
+	PiPlantDuotone,
+	PiPuzzlePieceDuotone,
+	PiSquareDuotone,
+	PiSquaresFourDuotone,
+} from "react-icons/pi";
+
+export const HeadingIcons: Record<Heading, IconType> = {
+	Overview: PiBookOpenDuotone,
+	"My Role": PiGearDuotone,
+	"My Challenges": PiPuzzlePieceDuotone,
+	"What I Learned": PiPlantDuotone,
+};
+
+export const CategoryIcons: Record<ProjectCategory | "All", IconType> = {
+	All: PiSquaresFourDuotone,
+	"Video Game": PiGameControllerDuotone,
+	Software: PiGearFineDuotone,
+	Web: PiGlobeDuotone,
+};
+
+export const DefaultIcon: IconType = PiSquareDuotone;
 
 export const PROJECTS: Project[] = [
 	{

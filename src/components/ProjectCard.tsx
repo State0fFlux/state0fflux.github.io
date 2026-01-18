@@ -9,14 +9,14 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
 	return (
-		<div onClick={() => onClick(project)} className="group overflow-hidden box-interactable">
+		<div onClick={() => onClick(project)} className="group overflow-hidden box-lift">
 			<img
 				src={project.thumbnail}
 				alt={project.title}
 				className="aspect-[4/3] grayscale group-hover:grayscale-0 duration-700 w-full object-cover"
 			/>
 
-			<div className="py-4 px-8 space-y-4 border-t-4 border-current">
+			<div className="py-4 px-8 space-y-4 border-t-[3px] border-current">
 				<Heading project={project} />
 
 				{project.tagline && (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PROJECTS } from "../constants";
+import { CategoryIcons, DefaultIcon, PROJECTS } from "../constants";
 import { Project, ProjectCategory } from "../types";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
@@ -32,17 +32,22 @@ const Projects: React.FC = () => {
 				</div>
 
 				{categories.length > 2 && (
-					<div className="flex flex-wrap items-center gap-x-0 lg:gap-x-16 px-2 py-1 backdrop-blur bg-black/25 border-4 border-black rounded-full">
-						{categories.map((cat) => (
-							<button
-								key={cat}
-								onClick={() => setFilter(cat)}
-								className={`px-6 py-2 text-xs lg:text-sm text-interactable ${
-									filter === cat ? "active" : ""
-								}`}>
-								{cat.toUpperCase()}
-							</button>
-						))}
+					<div className="flex flex-wrap justify-center items-center gap-8">
+						{categories.map((cat) => {
+							const Icon = CategoryIcons[cat] ?? DefaultIcon;
+
+							return (
+								<button
+									key={cat}
+									onClick={() => setFilter(cat)}
+									className={`text-xs lg:text-sm box-depress radio ${filter === cat ? "active" : ""}`}>
+									<span className="text-icon">
+										<Icon size={22} title="Award Earned" />
+										{cat.toUpperCase()}
+									</span>
+								</button>
+							);
+						})}
 					</div>
 				)}
 			</div>
@@ -58,11 +63,11 @@ const Projects: React.FC = () => {
 								project={project}
 								onClick={() => setSearchParams({ title: project.title })}
 							/>
-						)
+						),
 					)}
 				</div>
 			) : (
-				<div className="h-64 flex flex-col items-center justify-center text-slate-400 bg-slate-50 rounded-[2rem] border-2 border-dashed border-slate-200">
+				<div className="h-64 flex flex-col items-center justify-center milky border primary border-dashed">
 					<p className="text-xl">Stay tuned! More projects coming soon.</p>
 				</div>
 			)}

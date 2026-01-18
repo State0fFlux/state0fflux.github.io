@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -22,7 +22,7 @@ const App: React.FC = () => {
 				</Routes>
 			</main>
 
-			<footer className="milky border-y-4 py-6">
+			<footer className="milky border-y-[3px] py-6">
 				<div className="grid grid-col justify-center gap-4">
 					<p className="primary uppercase">© 2025 Brady Manske</p>
 					<Socials className="primary" />
